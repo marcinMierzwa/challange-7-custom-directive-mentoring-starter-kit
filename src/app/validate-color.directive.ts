@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, inject, Renderer2, signal} from '@angular/core';
+import { Directive, HostListener, inject, Renderer2, signal} from '@angular/core';
 
 export interface RGBFormat {
   RR: number;
@@ -41,8 +41,8 @@ export class ValidateColorDirective {
       this.renderer.setStyle(blueRectangle, 'backgroundColor', this.selectedColor());
     }  
     else {
-
       this.renderer.setStyle(document.querySelector('.blue-rectangle'), 'backgroundColor', '#0000ff');
+      this.isColorValid.update(isValid => !isValid);
     }  
   }
 

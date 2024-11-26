@@ -2,11 +2,12 @@ import { Component, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ResizeDirective } from './resize.directive';
 import { ValidateColorDirective } from './validate-color.directive';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ResizeDirective, ValidateColorDirective],
+  imports: [RouterOutlet, ResizeDirective, ValidateColorDirective, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
