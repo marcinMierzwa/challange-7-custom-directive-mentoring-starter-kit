@@ -27,16 +27,19 @@ export class ResizeDirective {
       const deltaX = event.clientX - this.startX; 
       const newWidth = this.startWidth + deltaX; 
       this.renderer.setStyle(this.element.nativeElement, 'width', `${newWidth}px`);
+      this.renderer.addClass(this.element.nativeElement, 'grabbing')
     }
   }
 
   @HostListener('mouseup')
   onMouseUp(): void {
     this.resizing = false; 
+    this.renderer.removeClass(this.element.nativeElement, 'grabbing');
   }
 
   @HostListener('mouseleave')
   onMouseLeave(): void {
     this.resizing = false; 
+    this.renderer.removeClass(this.element.nativeElement, 'grabbing');
 }
 }
