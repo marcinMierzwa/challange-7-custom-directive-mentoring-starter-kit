@@ -1,0 +1,29 @@
+<div
+  class="container-fluid d-flex justify-content-center align-items-center vw-100 vh-100"
+>
+  <div class="card">
+    <div class="card-header">
+      <h1>Custom Directives - Blue Reactangle</h1>
+    </div>
+    <div class="card-body">
+
+      <label for="exampleColorInput" class="form-label">Pick your color below</label>
+      <input
+        type="color"
+        class="form-control form-control-color"
+        id="exampleColorInput"
+        value="#0000ff"
+        title="Choose your color"
+        appValidateColor 
+      />
+
+      <div class="blue-rectangle"
+      appResize
+      ></div>
+      
+    </div>
+    <div class="card-footer text-body-secondary">
+      <button class="btn btn-outline-dark">Help</button>
+    </div>
+  </div>
+</div>
