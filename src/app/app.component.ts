@@ -1,7 +1,7 @@
 import { Component, signal, WritableSignal } from '@angular/core';
-import { ResizeDirective } from './resize.directive';
-import { ValidateColorDirective } from './validate-color.directive';
-import { ErrorMessageDirective } from './error-message.directive';
+import { ResizeDirective } from './Custom Directives/resize.directive';
+import { ValidateColorDirective } from './Custom Directives/validate-color.directive';
+import { ErrorMessageDirective } from './Custom Directives/error-message.directive';
 import { FormsModule } from '@angular/forms';
 
 @Component({

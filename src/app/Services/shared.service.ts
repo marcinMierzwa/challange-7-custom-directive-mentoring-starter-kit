@@ -9,7 +9,7 @@ export interface RGB {
 @Injectable({
   providedIn: 'root',
 })
-export class RectangleService {
+export class SharedService {
 
   hexToRgb(hex: string): RGB {
     const bigint = parseInt(hex.slice(1), 16);

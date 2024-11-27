@@ -3,7 +3,7 @@ import {
   inject,
   Renderer2,
 } from '@angular/core';
-import { RectangleService } from './rectangle.service';
+import { SharedService } from '../Services/shared.service';
 import { FormControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
 
 @Directive({
@@ -17,7 +17,7 @@ import { FormControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angula
 export class ValidateColorDirective implements Validator {
 
   renderer: Renderer2 = inject(Renderer2);
-  rectangleService: RectangleService = inject(RectangleService);
+  rectangleService: SharedService = inject(SharedService);
 
 
   validate(control: FormControl): ValidationErrors | null {
