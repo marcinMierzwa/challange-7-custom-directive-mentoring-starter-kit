@@ -6,6 +6,46 @@
       <h1>Custom Directives - Blue Reactangle</h1>
     </div>
     <div class="card-body">
+
+      <form #form="ngForm">
+      <label for="colorInput" class="form-label"
+        >Pick your color below</label
+      >
+      <input
+        ngModel
+        type="color"
+        class="form-control form-control-color"
+        id="colorInput"
+        name="colorInput"
+        #colorInput="ngModel"
+        value="#0000ff"
+        title="Choose your color"
+        appValidateColor
+      />
+          <small
+           class="text-danger mt-3"
+           *ngIf="colorInput.touched && colorInput.invalid"
+            >The color value is not red enough</small>
+    </form>
+
+      <div class="rectangle" appResize></div>
+    </div>
+    <div class="card-footer text-body-secondary">
+      <button class="btn btn-outline-dark">Help</button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div
+  class="container-fluid d-flex justify-content-center align-items-center vw-100 vh-100"
+>
+  <div class="card">
+    <div class="card-header">
+      <h1>Custom Directives - Blue Reactangle</h1>
+    </div>
+    <div class="card-body">
       <label for="exampleColorInput" class="form-label"
         >Pick your color below</label
       >
@@ -28,4 +68,4 @@
       <button class="btn btn-outline-dark">Help</button>
     </div>
   </div>
-</div>
+</div> -->
