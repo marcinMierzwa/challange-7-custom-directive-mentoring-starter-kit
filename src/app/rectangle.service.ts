@@ -10,9 +10,9 @@ export interface RGB {
   providedIn: 'root',
 })
 export class RectangleService {
-  
-  hexToRgb(hexColor: string): RGB {
-    const bigint = parseInt(hexColor.slice(1), 16);
+
+  hexToRgb(hex: string): RGB {
+    const bigint = parseInt(hex.slice(1), 16);
     const r = (bigint >> 16) & 255;
     const g = (bigint >> 8) & 255;
     const b = bigint & 255;

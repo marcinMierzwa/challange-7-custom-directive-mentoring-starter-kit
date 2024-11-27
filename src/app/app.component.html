@@ -6,8 +6,9 @@
       <h1>Custom Directives - Blue Reactangle</h1>
     </div>
     <div class="card-body">
-
-      <label for="exampleColorInput" class="form-label">Pick your color below</label>
+      <label for="exampleColorInput" class="form-label"
+        >Pick your color below</label
+      >
       <input
         type="color"
         class="form-control form-control-color"
@@ -16,13 +17,12 @@
         value="#0000ff"
         title="Choose your color"
         appValidateColor
-        (emitColorValidation)="handleColorValidation($event)" 
+        (emitIsColorValid)="handleColorValidation($event)"
       />
-
-      <div class="blue-rectangle"
-      appResize
-      ></div>
-      
+      <div style="height: 130px;" class="mt-3">
+      <div class="rectangle" appResize></div>
+      <small class="text-danger mt-3" *appErrorMessage="isColorValid()">The color value is not red enough</small>
+    </div>
     </div>
     <div class="card-footer text-body-secondary">
       <button class="btn btn-outline-dark">Help</button>
