@@ -15,7 +15,8 @@
         name="exampleColorInput"
         value="#0000ff"
         title="Choose your color"
-        appValidateColor 
+        appValidateColor
+        (emitColorValidation)="handleColorValidation($event)" 
       />
 
       <div class="blue-rectangle"

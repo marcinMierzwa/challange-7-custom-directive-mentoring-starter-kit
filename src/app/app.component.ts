@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'mentoring-program-starter-kit';
+
+  handleColorValidation(isColorValid: boolean) {
+    console.log(isColorValid);
+    
+  }
   // selectedColor = signal('#0000ff');
 
   // onColorChange(event: Event): void {
