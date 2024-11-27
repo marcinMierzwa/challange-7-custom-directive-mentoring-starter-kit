@@ -33,7 +33,7 @@ export class ValidateColorDirective implements Validator {
         return null;
       } else {
         this.renderer.setStyle(rectangle, 'backgroundColor', '#0000ff');
-        return { invalidColorError: true }; // Dodano zwrot błędu
+        return { invalidColorError: true }; 
       }
     } else {
       return {

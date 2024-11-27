@@ -1,11 +1,11 @@
-import { Directive, effect, inject, input, Input, Signal, signal, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, effect, inject, input,TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[appErrorMessage]',
   standalone: true
 })
 export class ErrorMessageDirective {
-  appErrorMessage = input()
+  appErrorMessage = input();
   private _templateRef: TemplateRef<any> = inject(TemplateRef);
   private _viewContainer: ViewContainerRef = inject(ViewContainerRef);
 
@@ -19,11 +19,6 @@ export class ErrorMessageDirective {
 
     })
   }
-  
- sendIsColorValid(isColorValid: boolean) {
-  console.log(isColorValid);
-  
- }
 
 
 }

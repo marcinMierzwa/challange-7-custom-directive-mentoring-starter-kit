@@ -7,24 +7,23 @@
     </div>
     <div class="card-body">
 
-      <form #form="ngForm">
+      <form style="height: 5rem;">
       <label for="colorInput" class="form-label"
         >Pick your color below</label
       >
       <input
-        ngModel
+        [(ngModel)]="colorInputValue"
         type="color"
         class="form-control form-control-color"
         id="colorInput"
         name="colorInput"
         #colorInput="ngModel"
-        value="#0000ff"
         title="Choose your color"
         appValidateColor
       />
           <small
            class="text-danger mt-3"
-           *ngIf="colorInput.touched && colorInput.invalid"
+           *appErrorMessage="colorInput.touched && colorInput.invalid"
             >The color value is not red enough</small>
     </form>
 
