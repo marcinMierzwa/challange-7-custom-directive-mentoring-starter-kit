@@ -15,11 +15,10 @@ export class GetBackgroundColorDirective {
     const backgroundRgbColor = element.style.backgroundColor;
     this.apiService.createBackground(backgroundRgbColor).subscribe({
       next: (res: ResponseSendBackground[]) => {
-        alert(
-          `Background Color: ${backgroundRgbColor} succesfully created!`
-        );
+        alert(`Background Color: ${backgroundRgbColor} succesfully created!`);
       },
-      error: (err) => alert(`Something went wrong! Backgroud Color not sent! ${err.message}`),
+      error: (err) =>
+        alert(`Something went wrong! Backgroud Color not sent! ${err.message}`),
     });
   }
 }

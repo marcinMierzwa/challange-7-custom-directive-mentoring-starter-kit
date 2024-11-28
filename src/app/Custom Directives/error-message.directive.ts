@@ -1,8 +1,15 @@
-import { Directive, effect, inject, input,TemplateRef, ViewContainerRef } from '@angular/core';
+import {
+  Directive,
+  effect,
+  inject,
+  input,
+  TemplateRef,
+  ViewContainerRef,
+} from '@angular/core';
 
 @Directive({
   selector: '[appErrorMessage]',
-  standalone: true
+  standalone: true,
 })
 export class ErrorMessageDirective {
   appErrorMessage = input();
@@ -11,14 +18,11 @@ export class ErrorMessageDirective {
 
   constructor() {
     effect(() => {
-  if (this.appErrorMessage()) {
-    this._viewContainer.createEmbeddedView(this._templateRef)
-  } else {
-    this._viewContainer.clear();
+      if (this.appErrorMessage()) {
+        this._viewContainer.createEmbeddedView(this._templateRef);
+      } else {
+        this._viewContainer.clear();
+      }
+    });
   }
-
-    })
-  }
-
-
 }

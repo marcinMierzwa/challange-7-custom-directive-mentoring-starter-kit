@@ -9,14 +9,19 @@ import { ShowModalIfDirective } from './Custom Directives/show-modal-if.directiv
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, ResizeDirective, ValidateColorDirective, ErrorMessageDirective, GetBackgroundColorDirective, ShowModalIfDirective],
+  imports: [
+    FormsModule,
+    ResizeDirective,
+    ValidateColorDirective,
+    ErrorMessageDirective,
+    GetBackgroundColorDirective,
+    ShowModalIfDirective,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'mentoring-program-starter-kit';
-  inputColorPicker = '#0000ff' 
-  isHelpSectionOpen = signal(false); 
-
-
+  inputColorPicker = '#0000ff';
+  isHelpSectionOpen = signal(false);
 }

@@ -1,8 +1,15 @@
-import { Directive, effect, inject, input, TemplateRef, ViewContainerRef } from '@angular/core';
+import {
+  Directive,
+  effect,
+  inject,
+  input,
+  TemplateRef,
+  ViewContainerRef,
+} from '@angular/core';
 
 @Directive({
   selector: '[appShowModalIf]',
-  standalone: true
+  standalone: true,
 })
 export class ShowModalIfDirective {
   private _templateRef: TemplateRef<any> = inject(TemplateRef);
@@ -12,11 +19,10 @@ export class ShowModalIfDirective {
   constructor() {
     effect(() => {
       if (this.appShowModalIf()) {
-        this._viewContainer.createEmbeddedView(this._templateRef)
+        this._viewContainer.createEmbeddedView(this._templateRef);
       } else {
         this._viewContainer.clear();
       }
-    
-        })
-      }
-    }
+    });
+  }
+}
