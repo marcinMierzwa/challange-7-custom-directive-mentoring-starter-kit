@@ -14,6 +14,7 @@ import { GetBackgroundColorDirective } from './Custom Directives/get-background-
 })
 export class AppComponent {
   title = 'mentoring-program-starter-kit';
-  colorInputValue = '#0000ff'  
+  inputColorPicker = '#0000ff' 
+  helpSectionVisible = signal(false); 
 
 }

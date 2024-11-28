@@ -7,12 +7,12 @@
     </div>
     <div class="card-body">
 
-      <form style="height: 5rem;">
+      <div style="height: 5rem;">
       <label for="colorInput" class="form-label"
         >Pick your color below</label
       >
       <input
-        [(ngModel)]="colorInputValue"
+        [(ngModel)]="inputColorPicker"
         type="color"
         class="form-control form-control-color"
         id="colorInput"
@@ -25,7 +25,7 @@
            class="text-danger mt-3"
            *appErrorMessage="colorInput.touched && colorInput.invalid"
             >The color value is not red enough</small>
-    </form>
+      </div>
 
       <div 
       class="rectangle"
@@ -34,7 +34,10 @@
       ></div>
     </div>
     <div class="card-footer text-body-secondary">
-      <button class="btn btn-outline-dark">Help</button>
+      <button
+      class="btn btn-outline-dark"
+      *appShowModalIf="helpSectionVisible()"
+      >Help</button>
     </div>
   </div>
 </div>
