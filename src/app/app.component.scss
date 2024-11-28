@@ -1,18 +1,34 @@
 .rectangle {
-    min-width: 100px;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 0.5rem;
-    background-color: #0000ff;
-    border: none;
-    border-radius: 5%;
-    transform: translateX(0);
-    transition: transform 0.1s linear;
-    user-select: none;
-    cursor: grab;
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  margin-block: 1.2rem;
+  background-color: #0000ff;
+  border: none;
+  border-radius: 5%;
+  transform: translateX(0);
+  transition: transform 0.1s linear;
+  user-select: none;
+  cursor: grab;
 }
 
 .rectangle.grabbing {
-    cursor: grabbing;
-  }
+  cursor: grabbing;
+}
 
+.modal {
+  top: 60%;
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+.btn-close:hover {
+  filter: invert(1);
+}
+
+.btn-close:focus {
+  outline: none;
+  box-shadow: none;
+}

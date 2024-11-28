@@ -1,16 +1,10 @@
 import { Injectable } from '@angular/core';
-
-export interface RGB {
-  r: number;
-  g: number;
-  b: number;
-}
+import { RGB } from '../Models/rgb-model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class RectangleService {
-
+export class SharedService {
   hexToRgb(hex: string): RGB {
     const bigint = parseInt(hex.slice(1), 16);
     const r = (bigint >> 16) & 255;
