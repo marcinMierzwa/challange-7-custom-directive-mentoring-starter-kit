@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
+import { RGB } from '../Models/rgb-model';
 
-export interface RGB {
-  r: number;
-  g: number;
-  b: number;
-}
+
 
 @Injectable({
   providedIn: 'root',
