@@ -16,4 +16,22 @@
     cursor: grabbing;
   }
 
+  .modal {
+    top: 60%;
+  }
+
+  .btn-close {
+    filter: invert(1);
+  }
+  
+  .btn-close:hover {
+    filter: invert(1);
+  }
+
+  .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+
 

@@ -11,7 +11,7 @@ export class ErrorMessageDirective {
 
   constructor() {
     effect(() => {
-  if (this.appErrorMessage()){
+  if (this.appErrorMessage()) {
     this._viewContainer.createEmbeddedView(this._templateRef)
   } else {
     this._viewContainer.clear();
